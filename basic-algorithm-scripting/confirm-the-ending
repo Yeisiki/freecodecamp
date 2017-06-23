@@ -1,0 +1,16 @@
+function confirmEnding(str, target) {
+
+  var inputLength = target.length;
+  var strInput = (inputLength * -1);
+  var strSlice = str.slice(strInput);
+
+ if (target === strSlice){
+    return true;
+  }else {
+    return false;
+  } 
+  return strSlice;
+}
+
+
+confirmEnding("Bastian", "n");
