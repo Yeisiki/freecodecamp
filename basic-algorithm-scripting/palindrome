@@ -1,0 +1,15 @@
+
+function palindrome(str) {
+  var pal = "";
+  
+  str = str.replace(/\b/g, "").replace(/\W+/g, "").replace(/\_/g, "").toLowerCase().toString();
+  pal = str.toLowerCase("").split("").reverse("").join("");
+  if (pal === str) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+palindrome("_eye");
