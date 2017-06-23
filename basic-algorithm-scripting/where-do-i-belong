@@ -1,0 +1,13 @@
+function getIndexToIns(arr, num) {
+  // Find my place in this sorted array.
+ var newArray = arr.concat(num).sort(function(a,b) {
+   return a - b;
+ });
+  return newArray.indexOf(num);
+ 
+}
+                           
+                              
+
+
+getIndexToIns([40, 60], 50);
