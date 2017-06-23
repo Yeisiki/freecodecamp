@@ -1,0 +1,26 @@
+
+function rot13(str) { // LBH QVQ VG!
+  var test = []; //iterated str into unicode array
+  var strDecoded; //+/- 13 char into Unicode, then decoded
+
+  //iterates through str and pushes unicode into array
+  for (var i = 0; i < str.length; i++) {
+  test.push(str.charCodeAt(i));
+  }
+  //iterates through array, adds 13 if A-M or a-m, subtracts 13 if N-Z or n-z
+ strDecoded = test.map(function(x) {
+                     if (x >= 65 && x <= 77 || x >= 97 && x <= 109) {
+   return  String.fromCharCode(x + 13);
+                     } 
+   else if (x >= 78 && x <= 90 || x >= 110 && x <= 122) {
+     return  String.fromCharCode(x - 13);
+ } else {
+   return String.fromCharCode(x);
+ }
+ });
+    
+  return strDecoded.join("");
+}
+
+// Change the inputs below to test
+rot13("serr /pbqr pnzc");
